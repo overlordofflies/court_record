@@ -1,0 +1,86 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While loading <'Image' u'sun_0.png'>:
+  File "renpy/common/00gamemenu.rpy", line 173, in script
+    $ ui.interact()
+  File "renpy/common/00gamemenu.rpy", line 173, in <module>
+    $ ui.interact()
+IOError: Couldn't find file 'sun_0.png'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "renpy/common/00gamemenu.rpy", line 173, in script
+    $ ui.interact()
+  File "C:\Users\XL\Documents\renpy-6.99.13-sdk\renpy\ast.py", line 881, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\XL\Documents\renpy-6.99.13-sdk\renpy\python.py", line 1913, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "renpy/common/00gamemenu.rpy", line 173, in <module>
+    $ ui.interact()
+  File "C:\Users\XL\Documents\renpy-6.99.13-sdk\renpy\ui.py", line 289, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\XL\Documents\renpy-6.99.13-sdk\renpy\display\core.py", line 2672, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "C:\Users\XL\Documents\renpy-6.99.13-sdk\renpy\display\core.py", line 3158, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "C:\Users\XL\Documents\renpy-6.99.13-sdk\renpy\display\core.py", line 2075, in draw_screen
+    renpy.config.screen_height,
+  File "render.pyx", line 487, in renpy.display.render.render_screen
+  File "render.pyx", line 235, in renpy.display.render.render
+  File "C:\Users\XL\Documents\renpy-6.99.13-sdk\renpy\display\layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 147, in renpy.display.render.render
+  File "render.pyx", line 235, in renpy.display.render.render
+  File "C:\Users\XL\Documents\renpy-6.99.13-sdk\renpy\display\transition.py", line 361, in render
+    top = render(self.new_widget, width, height, st, at)
+  File "render.pyx", line 147, in renpy.display.render.render
+  File "render.pyx", line 235, in renpy.display.render.render
+  File "C:\Users\XL\Documents\renpy-6.99.13-sdk\renpy\display\layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 147, in renpy.display.render.render
+  File "render.pyx", line 235, in renpy.display.render.render
+  File "C:\Users\XL\Documents\renpy-6.99.13-sdk\renpy\display\layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 147, in renpy.display.render.render
+  File "render.pyx", line 235, in renpy.display.render.render
+  File "C:\Users\XL\Documents\renpy-6.99.13-sdk\renpy\display\screen.py", line 669, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 147, in renpy.display.render.render
+  File "render.pyx", line 235, in renpy.display.render.render
+  File "C:\Users\XL\Documents\renpy-6.99.13-sdk\renpy\display\layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 147, in renpy.display.render.render
+  File "render.pyx", line 235, in renpy.display.render.render
+  File "C:\Users\XL\Documents\renpy-6.99.13-sdk\renpy\display\layout.py", line 883, in render
+    surf = render(d, rw, height - y, cst, cat)
+  File "render.pyx", line 147, in renpy.display.render.render
+  File "render.pyx", line 235, in renpy.display.render.render
+  File "C:\Users\XL\Documents\renpy-6.99.13-sdk\renpy\display\layout.py", line 925, in render
+    surf = render(d, width - x, rh, cst, cat)
+  File "render.pyx", line 147, in renpy.display.render.render
+  File "render.pyx", line 235, in renpy.display.render.render
+  File "C:\Users\XL\Documents\renpy-6.99.13-sdk\renpy\display\layout.py", line 455, in render
+    renders = [ render(i, renwidth, renheight, st, at) for i in children ]
+  File "render.pyx", line 147, in renpy.display.render.render
+  File "render.pyx", line 235, in renpy.display.render.render
+  File "C:\Users\XL\Documents\renpy-6.99.13-sdk\renpy\display\behavior.py", line 727, in render
+    rv = super(Button, self).render(width, height, st, at)
+  File "C:\Users\XL\Documents\renpy-6.99.13-sdk\renpy\display\layout.py", line 1124, in render
+    st, at)
+  File "render.pyx", line 147, in renpy.display.render.render
+  File "render.pyx", line 235, in renpy.display.render.render
+  File "C:\Users\XL\Documents\renpy-6.99.13-sdk\renpy\display\im.py", line 580, in render
+    return cache.get(self, render=True)
+  File "C:\Users\XL\Documents\renpy-6.99.13-sdk\renpy\display\im.py", line 266, in get
+    surf = image.load()
+  File "C:\Users\XL\Documents\renpy-6.99.13-sdk\renpy\display\im.py", line 625, in load
+    surf = renpy.display.pgrender.load_image(renpy.loader.load(self.filename), self.filename)
+  File "C:\Users\XL\Documents\renpy-6.99.13-sdk\renpy\loader.py", line 576, in load
+    raise IOError("Couldn't find file '%s'." % name)
+IOError: Couldn't find file 'sun_0.png'.
+
+Windows-8-6.2.9200
+Ren'Py 7.1.3.1092
+Court Record 1.0
+Sun Dec 16 13:10:28 2018
