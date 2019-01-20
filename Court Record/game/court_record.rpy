@@ -161,7 +161,7 @@ screen court_record:
 
             elif evidence_type == "profiles":
                 imagebutton auto "evidence_button_%s.png" action [SetVariable("current", ""), SetVariable("ev_page", 0), SetVariable("next_ev_page", 0), SetVariable("evidence_type", "evidence")] 
-            imagebutton auto "close_%s.png" action [Hide('court_record'), Jump(current_scene)]
+            imagebutton auto "close_%s.png" action [SetVariable("ev_page", 0), Hide('court_record'), Jump(current_scene)]
 
 screen cr_detail:
     tag menu
